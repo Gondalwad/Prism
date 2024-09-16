@@ -1,7 +1,5 @@
 import exp from 'constants';
 import mongoose from 'mongoose'
-import { type } from 'os'
-
 
 const userSchema = new mongoose.Schema({
 
