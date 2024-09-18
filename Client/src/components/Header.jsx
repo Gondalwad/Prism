@@ -24,10 +24,10 @@ export default function Header() {
           <Button className='w-12 h-10 hidden lg:inline border-2' color="grey" outline pill>
             <FaMoon/>
           </Button>
-          <Link to="/signin" >
+          <Link to="/sign-in" >
             <Button  gradientDuoTone="purpleToBlue" outline>Sign IN</Button>
           </Link>
-          <Link to="/signup">
+          <Link to="/sign-up">
             <Button gradientDuoTone="purpleToBlue" outline>Sign UP</Button>
           </Link>
         </div>
