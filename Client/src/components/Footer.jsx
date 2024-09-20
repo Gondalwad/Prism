@@ -7,7 +7,7 @@ import { BsFacebook, BsInstagram, BsTwitter, BsGithub, BsDribbble } from 'react-
 
 export default function FooterOfPage() {
   return (
-    <Footer container className='p-3 border-t-8 border-t-teal-400'>
+    <Footer container className='p-3 border-t-8 border-t-teal-400 '>
       <div className='w-full flex justify-between flex-wrap'>
         <div className='logoFooter m-5'>
             <Logo></Logo>
@@ -40,13 +40,14 @@ export default function FooterOfPage() {
             </div>
         </div>
         <Footer.Divider/>
-        <div className='w-full flex justify-between'>
+        <div className='w-full flex justify-between flex-col sm:flex-row gap-4'>
             <Footer.Copyright by="Prism's" year={new Date().getFullYear()}/>
             <div className='flex gap-3'>
                 <Footer.Icon href='#' target='_blank' icon={BsFacebook}/>
                 <Footer.Icon href='#' target='_blank' icon={BsDribbble}/>
                 <Footer.Icon href='#' target='_blank' icon={BsInstagram}/>
                 <Footer.Icon href='#' target='_blank' icon={BsGithub }/>
+                <Footer.Icon href='#' target='_blank' icon={BsTwitter }/>
             </div>
         </div>
         </div>
