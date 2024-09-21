@@ -4,6 +4,7 @@ import {Link, useNavigate} from 'react-router-dom'
 import {TextInput, Button, Label, Alert, Spinner} from 'flowbite-react'
 import { FaGoogle,FaEye } from "react-icons/fa";
 import { useState } from 'react';
+import GoogleAuth from '../components/GoogleAuth';
 
 export default function SignUp() {
   // signUP functionality 
@@ -84,7 +85,8 @@ export default function SignUp() {
               <Button className='bg-gradient-to-r from-red-500 to-purple-500 font-bold' type='submit' disabled={loading} >
                 {loading ? <><Spinner></Spinner>'Loading...'</> :'Sign Up'}</Button>
 
-              <Button className='bg-gradient-to-r from-blue-500 via-green-500 via-yellow-400 to-red-500 ' outline><FaGoogle className='mt-0 mx-2 text-xl'/> Continue With Google</Button>
+              {/* google signin button */}
+              <GoogleAuth/>
               <span className='flex gap-2 text-center mt-0'>
               <p>Already Have an Account ! <Link to="/sign-in" className='text-blue-700 font-semibold m-0 underline'>signIn</Link></p>
               </span>

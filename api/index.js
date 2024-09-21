@@ -2,7 +2,8 @@ import express from 'express';
 import mongoose from 'mongoose'
 import dotenv from 'dotenv';
 import tester from './routes/user.route.js'
-import signup from './routes/auth.route.js'
+import signUser from './routes/auth.route.js'
+
 dotenv.config();
 const app = express();
 
@@ -20,7 +21,8 @@ app.listen(3000,()=>{
 
 app.use(express.json());
 app.use('/api/user',tester);
-app.use('/auth/user',signup);
+app.use('/auth/user',signUser);
+
 
 //middle ware to handle errors
 app.use((err, req, res, next)=>{

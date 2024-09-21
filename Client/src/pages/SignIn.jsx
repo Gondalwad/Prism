@@ -10,6 +10,7 @@ import {
   signInFailure,
 } from "../redux/user/userSlice.js";
 import { useDispatch, useSelector } from "react-redux";
+import GoogleAuth from "../components/GoogleAuth.jsx";
 
 export default function SignIn() {
   // signUP functionality
@@ -105,12 +106,9 @@ export default function SignIn() {
                 )}
               </Button>
 
-              <Button
-                className="bg-gradient-to-r from-blue-500 via-green-500 via-yellow-400 to-red-500 "
-                outline
-              >
-                <FaGoogle className="mt-0 mx-2 text-xl" /> Continue With Google
-              </Button>
+              {/* google signIn */}
+              <GoogleAuth/>
+              
               <span className="flex gap-2 text-center mt-0">
                 <p>
                   Don't Have An Account ?{" "}
